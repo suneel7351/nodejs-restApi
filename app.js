@@ -12,13 +12,13 @@ import productRouter from "./routes/product.js";
 import orderRouter from "./routes/order.js";
 app.use(cookieParser());
 app.use(express.json());
-app.use(
-  cors({
-    credentials: true,
-    methods: ["GET", "PUT", "POST", "DELETE"],
-    origin: [process.env.CLIENT_URL_1, process.env.CLIENT_URL_2],
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     methods: ["GET", "PUT", "POST", "DELETE"],
+//     // origin: [process.env.CLIENT_URL_1, process.env.CLIENT_URL_2],
+//   })
+// );
 app.use("/api/v1", userRouter);
 app.use("/api/v2", productRouter);
 app.use("/api/v3", orderRouter);
